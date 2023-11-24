@@ -1,3 +1,4 @@
 streamlit
-tensorflow
-opencv-python-headless
+skimage 
+skimage.filters
+matplotlib.pyplot
