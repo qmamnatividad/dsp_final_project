@@ -1,4 +1,5 @@
 streamlit
 skimage 
+numpy
 skimage.filters
 matplotlib.pyplot
