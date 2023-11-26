@@ -20,7 +20,7 @@ def main():
         img2 = (img - gaussian_img) * 2.
 
         # Combine original and unsharp mask
-        img3 = img + img2
+        img3 = img + gaussian_img
 
         # Clip the image values to be within [0.0, 1.0]
         img3 = np.clip(img3, 0.0, 1.0)
