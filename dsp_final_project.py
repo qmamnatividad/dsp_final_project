@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-from skimage import io, img_as_float
+from skimage import io, img_as_float, exposure
 from skimage.filters import unsharp_mask, gaussian
 
 def main():
@@ -18,6 +18,9 @@ def main():
 
         # Calculate unsharp mask
         img2 = (img - gaussian_img) * 2.
+
+        # Rescale the unsharp mask to match the intensity range of the original image
+        img2 = exposure.rescale_intensity(img2, in_range=(img2.min(), img2.max()), out_range=(0, 1))
 
         # Combine original and unsharp mask
         img3 = img + img2
