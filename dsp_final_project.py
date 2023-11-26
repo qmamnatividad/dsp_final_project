@@ -23,11 +23,13 @@ def main():
         img3 = img + img2
 
         # Clip the image values to be within [0.0, 1.0]
+        img = np.clip(img, 0.0, 1.0)
+        gaussian_img = np.clip(gaussian_img, 0.0, 1.0)
         img3 = np.clip(img3, 0.0, 1.0)
 
-        # Display the images
+        # Display the images with a specified color map (you can adjust 'cmap' as needed)
         st.image([img, gaussian_img, img3], caption=['Original', 'Blurred', 'Original - Blurred'],
-                 width=300, use_column_width=True, cmap='gray')
+                 width=300, use_column_width=True, cmap='viridis')
 
 if __name__ == "__main__":
     main()
