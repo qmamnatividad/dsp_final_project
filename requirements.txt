@@ -1,3 +1,2 @@
 streamlit
-tensorflow
-opencv-python-headless
+scikit-image
