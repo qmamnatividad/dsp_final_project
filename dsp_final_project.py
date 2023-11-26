@@ -26,8 +26,8 @@ def main():
         img3 = np.clip(img3, 0.0, 1.0)
 
         # Display the images
-        st.image([img, gaussian_img, img3], caption=['Original', 'Blurred', 'Original - Blurred'], 
-                 width=300, use_column_width=True)
+        st.image([img, gaussian_img, img3], caption=['Original', 'Blurred', 'Original - Blurred'],
+                 width=300, use_column_width=True, cmap='gray')
 
 if __name__ == "__main__":
     main()
