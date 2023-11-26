@@ -1,5 +1,3 @@
-pip install streamlit scikit-image
-
 import streamlit as st
 import numpy as np
 from skimage import io, img_as_float
