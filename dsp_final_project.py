@@ -4,7 +4,7 @@ from skimage import io, img_as_float
 from skimage.filters import unsharp_mask, gaussian
 
 def main():
-    st.title("Unsharp Masking with Streamlit")
+    st.title("Unsharp Masking - MaNiKa")
 
     # Upload image through Streamlit
     uploaded_file = st.file_uploader("Choose an image...", type="jpg")
