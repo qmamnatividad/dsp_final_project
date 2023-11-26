@@ -27,7 +27,7 @@ def main():
         img3 = np.clip(img3, 0.0, 1.0)
 
         # Display the images
-        st.image([img, img3], caption=['Original', 'Unsharp Mask'], width=300, use_column_width=True)
+        st.image([img, img3], caption=['Original', 'Unsharp Masked'], width=300, use_column_width=True)
 
 if __name__ == "__main__":
     main()
