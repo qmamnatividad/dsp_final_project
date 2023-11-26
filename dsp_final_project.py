@@ -19,13 +19,11 @@ def main():
         # Calculate unsharp mask
         img2 = (img - gaussian_img) * 2.
 
-        # Clip the image values to be within [0.0, 1.0]
-        img = np.clip(img, 0.0, 1.0)
-        gaussian_img = np.clip(gaussian_img, 0.0, 1.0)
-        img3 = np.clip(img3, 0.0, 1.0)
-
         # Combine original and unsharp mask
         img3 = img + img2
+
+        # Clip the image values to be within [0.0, 1.0]
+        img3 = np.clip(img3, 0.0, 1.0)
 
         # Display the images
         st.image([img, gaussian_img, img3], caption=['Original', 'Blurred', 'Original - Blurred'], 
